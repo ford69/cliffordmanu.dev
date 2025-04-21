@@ -33,7 +33,7 @@ const Contact = () => {
   const controls = useAnimation();
   const ref = useRef(null);
   const formRef = useRef<HTMLFormElement>(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const { toast } = useToast();
   
   useEffect(() => {
