@@ -41,17 +41,17 @@ const Skills = () => {
     {
       category: "Frontend Development",
       icon: <Monitor className="w-8 h-8 text-indigo-400" />,
-      skills: ["React", "React Native", "Next.js", "JavaScript/TypeScript", "HTML5/CSS3", "Tailwind CSS"]
+      skills: ["React", "React Native", "Next.js", "Vue.js", "JavaScript/TypeScript", "HTML5/CSS3", "Tailwind CSS"]
     },
     {
       category: "Backend Development",
       icon: <Server className="w-8 h-8 text-purple-400" />,
-      skills: ["Node.js", "PHP", "Express.js", "RESTful APIs", "GraphQL", "Microservices"]
+      skills: ["Node.js", "PHP", "Express.js", "RESTful APIs", "Microservices"]
     },
     {
       category: "Database Management",
       icon: <Database className="w-8 h-8 text-pink-400" />,
-      skills: ["MySQL", "MongoDB", "PostgreSQL", "Firebase", "Redis", "ORM Tools"]
+      skills: ["MySQL", "MongoDB", "Superbase", "PostgreSQL", "Firebase", "Redis", "ORM Tools"]
     },
     {
       category: "Mobile Development",
@@ -61,7 +61,7 @@ const Skills = () => {
     {
       category: "Cloud & DevOps",
       icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      skills: ["DigitalOcean", "Linux/Ubuntu", "CI/CD", "Docker", "AWS", "Serverless"]
+      skills: ["Linux/Ubuntu", "CI/CD", "Serverless", "CPanel"]
     },
     {
       category: "Web Services",

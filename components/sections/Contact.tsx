@@ -35,7 +35,7 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const { toast } = useToast();
-  
+
   useEffect(() => {
     if (isInView) {
       controls.start('visible');
@@ -44,10 +44,10 @@ const Contact = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' } 
+      transition: { duration: 0.6, ease: 'easeOut' }
     }
   };
 
@@ -86,7 +86,7 @@ const Contact = () => {
         title: "Message sent successfully!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
-      
+
       form.reset();
     } catch (error) {
       toast({
@@ -101,18 +101,18 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5 text-indigo-400" />,
       label: "Email",
-      value: "contact@example.com",
-      link: "mailto:contact@example.com"
+      value: "cliffordmanu7@gmail.com",
+      link: "mailto:cliffordmanu7@gmail.com"
     },
     {
       icon: <Phone className="w-5 h-5 text-indigo-400" />,
       label: "Phone",
-      value: "+123 456 7890",
-      link: "tel:+1234567890"
+      value: "+223 503 984 976",
+      link: "tel:+233503984976"
     },
     {
       icon: <MapPin className="w-5 h-5 text-indigo-400" />,
-      label: "Location",
+      label: "Spintex Community 15",
       value: "Accra, Ghana",
       link: "#"
     }
@@ -127,7 +127,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-gray-900 to-black">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
@@ -150,7 +150,7 @@ const Contact = () => {
             <motion.div variants={fadeInUp} className="space-y-8">
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-                
+
                 <div className="space-y-4">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
@@ -159,8 +159,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-muted-foreground text-sm">{item.label}</p>
-                        <a 
-                          href={item.link} 
+                        <a
+                          href={item.link}
                           className="hover:text-primary transition-colors"
                         >
                           {item.value}
@@ -169,12 +169,12 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-8">
                   <h4 className="text-sm text-muted-foreground mb-3">FOLLOW ME</h4>
                   <div className="flex gap-3">
                     {socialLinks.map((link, index) => (
-                      <a 
+                      <a
                         key={index}
                         href={link.href}
                         target="_blank"
@@ -188,7 +188,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 border border-border h-64 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-900 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
@@ -198,22 +198,23 @@ const Contact = () => {
                   <h3 className="text-2xl font-bold mb-3">Looking for a developer?</h3>
                   <p className="text-muted-foreground mb-6">I'm currently available for freelance work and full-time positions.</p>
                   <Button asChild className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700">
-                    <a href="#" className="flex items-center gap-2">
+                    <a href="/files/resume.pdf" download className="flex items-center gap-2">
                       Download Resume
                     </a>
                   </Button>
                 </div>
               </div>
+
             </motion.div>
-            
+
             <motion.div variants={fadeInUp}>
               <div className="bg-card rounded-xl p-6 lg:p-8 border border-border relative overflow-hidden">
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-900/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-900/10 rounded-full blur-3xl"></div>
-                
+
                 <div className="relative">
                   <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-                  
+
                   <Form {...form}>
                     <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -224,9 +225,9 @@ const Contact = () => {
                             <FormItem>
                               <FormLabel>Name</FormLabel>
                               <FormControl>
-                                <Input 
-                                  placeholder="Your name" 
-                                  {...field} 
+                                <Input
+                                  placeholder="Your name"
+                                  {...field}
                                   name="from_name"
                                   className="bg-background/50 focus:border-indigo-500 transition-colors"
                                 />
@@ -235,7 +236,7 @@ const Contact = () => {
                             </FormItem>
                           )}
                         />
-                        
+
                         <FormField
                           control={form.control}
                           name="email"
@@ -243,8 +244,8 @@ const Contact = () => {
                             <FormItem>
                               <FormLabel>Email</FormLabel>
                               <FormControl>
-                                <Input 
-                                  placeholder="Your email" 
+                                <Input
+                                  placeholder="Your email"
                                   {...field}
                                   name="from_email"
                                   className="bg-background/50 focus:border-indigo-500 transition-colors"
@@ -255,7 +256,7 @@ const Contact = () => {
                           )}
                         />
                       </div>
-                      
+
                       <FormField
                         control={form.control}
                         name="subject"
@@ -263,8 +264,8 @@ const Contact = () => {
                           <FormItem>
                             <FormLabel>Subject</FormLabel>
                             <FormControl>
-                              <Input 
-                                placeholder="Subject of your message" 
+                              <Input
+                                placeholder="Subject of your message"
                                 {...field}
                                 name="subject"
                                 className="bg-background/50 focus:border-indigo-500 transition-colors"
@@ -274,7 +275,7 @@ const Contact = () => {
                           </FormItem>
                         )}
                       />
-                      
+
                       <FormField
                         control={form.control}
                         name="message"
@@ -282,8 +283,8 @@ const Contact = () => {
                           <FormItem>
                             <FormLabel>Message</FormLabel>
                             <FormControl>
-                              <Textarea 
-                                placeholder="Your message" 
+                              <Textarea
+                                placeholder="Your message"
                                 {...field}
                                 name="message"
                                 className="bg-background/50 min-h-[120px] focus:border-indigo-500 transition-colors"
@@ -293,9 +294,9 @@ const Contact = () => {
                           </FormItem>
                         )}
                       />
-                      
-                      <Button 
-                        type="submit" 
+
+                      <Button
+                        type="submit"
                         className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 group"
                       >
                         <span className="flex items-center gap-2">

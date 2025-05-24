@@ -2,8 +2,8 @@ export const projectsData = [
   {
     title: "AI-Powered Password Generator",
     description: "A secure password generator with AI-powered strength scoring, helping users create and manage strong, unique passwords with real-time feedback.",
-    image: "https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg",
-    technologies: ["React", "Node.js", "Machine Learning", "Express"],
+    image: "/images/ai-generator.png",
+    technologies: ["Laravel", "Vite", "Machine Learning", "Gemini"],
     github: "https://github.com/ford69",
     demo: "#"
   },
@@ -16,18 +16,18 @@ export const projectsData = [
     demo: "#"
   },
   {
-    title: "Airbnb Web App Clone",
+    title: "Airbnb Web App",
     description: "Full-featured Airbnb-style property booking application with search, filtering, user profiles, booking management, and payment processing.",
-    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
-    technologies: ["Next.js", "Tailwind CSS", "Supabase", "Stripe"],
+    image: "/images/airbnb.png",
+    technologies: ["Next.js", "Tailwind CSS", "MongoDb", "Stripe"],
     github: "https://github.com/ford69",
     demo: "#"
   },
   {
     title: "Home Rental Web App",
     description: "Platform connecting tenants and landlords for home listing and renting, with property management, tenant verification, and payment handling.",
-    image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
-    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Docker"],
+    image: "/images/home-rental.png",
+    technologies: ["Laravel", "Node.js", "MySQL", "Redis"],
     github: "https://github.com/ford69",
     demo: "#"
   },
